@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html xmlns:th=“http://www.thymeleaf.org”>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FaceBook - Welcome</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="container mt-5">
+
+      <div class="row welcome">
+
+        <div class="col-lg-7">
+
+        <img src="" alt="">
+        <h1 class="logo pb-2">Facebook</h1>
+        <h2 class="JavaFacebook mb-5">Facebook helps you connect and share <br> with people all over the world.</h2>
+        </div>
+
+        <div class="col-lg-5">
+
+         <div class="shadow p-3 mb-5 bg-body rounded">
+
+             <form action="" th:action="@{/login}" th:object="${user}" method="POST">
+               <p th:text="${error}" style="color: red"></p>
+               <input class="form-control mb-3" type="text" th:field="*{email}" placeholder="Email Address">
+               <input class="form-control" type="password" th:field="*{password}" placeholder="Password">
+               <div class="d-grid gap-2 mt-3">
+                 <button type="submit" class="btn btn-primary btn-lg">Log In</button>
+
+               <p class="text-center mt-2"><a href="#">Forgotten password?</a></p>
+               <div class="divider"></div>
+               <a th:href ="@{/signup}" class="btn btn-green btn-lg mt-3 mb-3">
+                 Create New Account
+               </a>
+
+               </div>
+             </form>
+
+         </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

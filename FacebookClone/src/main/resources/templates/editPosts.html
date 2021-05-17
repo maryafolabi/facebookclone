@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="col-lg-6">
+<div class="shadow p-3 mb-5 bg-body rounded">
+  <div class="row">
+
+    <form action="" th:action="@{/edit}" th:object="${post}" method = "POST">
+      <div class="col-lg-11 text-right">
+          <textarea th:field="*{postID}" class="form-control drag"style="display: none"></textarea>
+        <textarea th:field="*{body}" class="form-control drag" placeholder="What's on your mind @Username?"></textarea>
+        <button type="submit" class="btn btn-primary btn-md mt-3 btn-block">Post</button>
+      </div>
+    </form>
+</div>
+  </div>
+</div>
+</body>
+</html>
